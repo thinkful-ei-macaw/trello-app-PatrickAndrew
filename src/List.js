@@ -1,11 +1,14 @@
 import React from "react";
 import "./List.css";
+import Card from './Card'
 
-function List() {
+function List(props) {
   return (
     <section class='List'>
-      <header></header>
-      <div class='List-cards'></div>
+      <header>{props.header}</header>
+      <div class='List-cards'>
+        {props.cardIds.map(id => <Card />)}
+      </div>
     </section>
   );
 }
